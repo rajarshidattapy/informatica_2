@@ -103,7 +103,6 @@ function App() {
             </ProtectedRoute>
           }
         />
-<<<<<<< HEAD
         <Route
           path="/art-gallery"
           element={
@@ -112,9 +111,6 @@ function App() {
             </ProtectedRoute>
           }
         />
-=======
-        
->>>>>>> 66fa78a (Art gallery -> More)
         <Route
           path="/student-activities"
           element={
@@ -132,17 +128,6 @@ function App() {
           }
         />
         <Route
-<<<<<<< HEAD
-=======
-          path="/art-gallery"
-          element={
-            <ProtectedRoute>
-              <ArtGallery />
-            </ProtectedRoute>
-          }
-        />
-        <Route
->>>>>>> 66fa78a (Art gallery -> More)
           path="/about"
           element={
             <ProtectedRoute>
@@ -155,4 +140,4 @@ function App() {
   );
 }
 
-export default App
+export default App;

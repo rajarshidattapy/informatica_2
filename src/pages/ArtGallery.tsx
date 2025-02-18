@@ -1,16 +1,10 @@
-<<<<<<< HEAD
-import React from 'react';
+import React, { useState } from 'react';
 import Navbar from '../components/Navbar';
 import Row from '../components/Row';
 
 function ArtGallery() {
-=======
-import React, { useState } from 'react';
-
-function ArtGallery() {
   const [activeTab, setActiveTab] = useState('gallery');
 
->>>>>>> 66fa78a (Art gallery -> More)
   const artworks = [
     {
       title: "Digital Art Exhibition",
@@ -29,13 +23,6 @@ function ArtGallery() {
     }
   ];
 
-<<<<<<< HEAD
-  return (
-    <div className="page-container">
-      <div className="content-wrapper">
-        <h1 className="page-title">Art Gallery</h1>
-        <Row title="Featured Artworks" items={artworks} />
-=======
   const faculty = [
     { name: "Dr. Prakash J", designation: "Professor and Vice Principal" },
     { name: "Dr. Asha.T", designation: "Professor and HOD" },
@@ -115,7 +102,7 @@ function ArtGallery() {
         {activeTab === 'gallery' && (
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {artworks.map((artwork, index) => (
-              <div 
+              <div
                 key={index}
                 className="bg-zinc-900 rounded-lg overflow-hidden hover:scale-105 transition-transform duration-300"
               >
@@ -137,7 +124,7 @@ function ArtGallery() {
         {activeTab === 'faculty' && (
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             {faculty.map((member, index) => (
-              <div 
+              <div
                 key={index}
                 className="bg-zinc-900 p-6 rounded-lg hover:scale-105 transition-transform duration-300"
               >
@@ -162,7 +149,9 @@ function ArtGallery() {
           <div className="space-y-12">
             {/* Overall Analysis */}
             <div className="bg-zinc-900 rounded-lg p-8">
-              <h2 className="text-2xl font-bold mb-6">Overall Analysis {resultAnalysis.overall.year}</h2>
+              <h2 className="text-2xl font-bold mb-6">
+                Overall Analysis {resultAnalysis.overall.year}
+              </h2>
               <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
                 <div className="text-center">
                   <div className="text-4xl font-bold text-red-600 mb-2">
@@ -190,7 +179,7 @@ function ArtGallery() {
               <h2 className="text-2xl font-bold mb-6">Semester-wise Analysis</h2>
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
                 {resultAnalysis.semesterWise.map((sem, index) => (
-                  <div 
+                  <div
                     key={index}
                     className="bg-zinc-800 p-4 rounded-lg text-center"
                   >
@@ -204,7 +193,6 @@ function ArtGallery() {
             </div>
           </div>
         )}
->>>>>>> 66fa78a (Art gallery -> More)
       </div>
     </div>
   );
